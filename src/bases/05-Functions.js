@@ -1,39 +1,32 @@
 
 
-
-// function saludar ( xyz ){
-//     return `Hola mundo ${ xyz }`
+// function saludar(nombre){
+    // return `Hola ${nombre}`
 // }
+//  
+// tambien estan las funciones anonimas
 
-// const saludar = function( xyz ){
-//     return `Hola mundo ${ xyz }`
-// }
+const saludar= (nombre)=>`Hola ${nombre}`
 
-const saludar =  ( xyz = 'Peter' ) => `Hola ${ xyz }`
+//funciones flecha,
+
 
 const nombre = 'Tony'
+//console.log(saludar(nombre))
 
-// console.log( saludar( nombre ) )
+const getUser = () =>({uid:'ABC123', username: 'Tony'})// estamos creando con una funcion flecha, na funcion que nos returna un objeto
+console.log(getUser())
 
-const getUser = () => ({ 
-    uid: 112231,
-    userName: 'Tony001'
-})
-// console.log( getUser() )
 
-const heroes = [{
+//Ejercicio
+///     USANDO  
+const eroes = [{
     id: 1,
-    name: 'Batman'
+    name: 'Batmam'
 },{
     id: 2,
     name: 'Superman'
-}]
-
-const existe = ( heroe ) => heroes.find( element =>  element.name == heroe ) ? true : false
-console.log( existe('Superman') ) 
-
-//  o de la siguiente manera
-
-const { name } = ( heroe ) => heroes.some( element =>  element.name == 'Superman' )
-// Estudiar este tipo de desestructuracion
-console.log( name ) 
+}
+]
+const existe = (array,vEvalular)=> array.some(arraVal=> vEvalular===arraVal.name);
+console.log(existe(eroes,'Batmam')) 
